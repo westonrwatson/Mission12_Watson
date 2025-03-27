@@ -27,9 +27,9 @@ namespace BookstoreApi.Models
         public string Classification { get; set; }  
 
         [Required]
-        public string Category { get; set; }  // ✅ Added missing Category field
+        public string Category { get; set; }
 
-        [Column("PageCount")]  // Match with existing database column name
+        [Column("PageCount")]
         [Required]
         public int NumberOfPages { get; set; }
 

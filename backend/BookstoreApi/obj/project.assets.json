@@ -3905,11 +3905,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/westonwatson/Documents/Winter 2025/413/Mission11_Watson/backend/BookstoreApi/BookstoreApi.csproj",
+      "projectUniqueName": "/Users/westonwatson/Documents/Winter 2025/413/Mission12_Watson/backend/BookstoreApi/BookstoreApi.csproj",
       "projectName": "BookstoreApi",
-      "projectPath": "/Users/westonwatson/Documents/Winter 2025/413/Mission11_Watson/backend/BookstoreApi/BookstoreApi.csproj",
+      "projectPath": "/Users/westonwatson/Documents/Winter 2025/413/Mission12_Watson/backend/BookstoreApi/BookstoreApi.csproj",
       "packagesPath": "/Users/westonwatson/.nuget/packages/",
-      "outputPath": "/Users/westonwatson/Documents/Winter 2025/413/Mission11_Watson/backend/BookstoreApi/obj/",
+      "outputPath": "/Users/westonwatson/Documents/Winter 2025/413/Mission12_Watson/backend/BookstoreApi/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/westonwatson/.nuget/NuGet/NuGet.Config"

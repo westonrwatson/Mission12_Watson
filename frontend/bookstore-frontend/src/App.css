@@ -1,38 +1,232 @@
-.App {
+/* General body styles */
+body {
+  background-color: #f8f9fa; /* Light gray background for contrast */
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Container to remove unwanted padding and maximize space */
+.container-fluid {
+  padding-left: 0;
+  padding-right: 0;
+  max-width: 100%;
+  margin-top: 20px;
+}
+
+/* Main header */
+h2 {
+  font-size: 28px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+/* Styling for category filter and cart */
+.border-start,
+.border-end {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+/* Category and cart panel spacing */
+h5 {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+/* Right-align the filter header */
+h5.text-end {
+  text-align: right;
+}
+
+/* Table spacing and appearance */
+.table-responsive {
+  margin-top: 15px;
+}
+
+/* Table and cell styles */
+.table th,
+.table td {
+  vertical-align: middle;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Make the table look sharp */
+.table {
+  background-color: #fff;
+  border-radius: 5px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* Add hover effect on rows */
+.table tbody tr:hover {
+  background-color: #f1f1f1;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+/* Button Styles */
+.btn-primary {
+  background-color: #007bff;
+  border-color: #007bff;
+  transition: background-color 0.2s;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+  border-color: #004b9a;
+}
+
+/* Checkout button styles */
+.btn-danger {
+  background-color: #dc3545;
+  border-color: #dc3545;
+  transition: background-color 0.2s;
+}
+
+.btn-danger:hover {
+  background-color: #c82333;
+  border-color: #bd2130;
+}
+
+/* Pagination styles */
+.pagination {
+  margin-top: 20px;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+/* List group (shopping cart) */
+.list-group {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* List group items for cart */
+.list-group-item {
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Ensure add to cart button has consistent height */
+.btn-sm {
+  height: 30px;
+  padding: 5px 10px;
+  font-size: 14px;
+}
+
+/* Custom margin for pagination */
+.pagination {
+  margin-top: 20px;
+  justify-content: center;
+}
+
+/* Remove outline on button click */
+button:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+/* Add space for buttons inside table */
+.table button {
+  margin-top: 2px;
+  margin-bottom: 2px;
+  width: 100%;
+  padding: 5px 10px;
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+/* Checkbox and category label alignment */
+.d-flex.justify-content-end {
+  gap: 8px;
+  cursor: pointer;
+}
+
+/* Ensure checkboxes stay aligned to the right */
+.form-check-input {
+  margin-left: auto;
+  margin-right: 0;
+}
+
+/* Right-align the checkboxes in the category filter */
+.border-end {
+  text-align: right;
+}
+
+/* Add space to left and right side columns */
+.border-end {
+  padding-right: 10px;
+}
+
+.border-start {
+  padding-left: 10px;
+}
+
+/* Fix alignment of shopping cart total */
+h6.text-end {
+  text-align: right;
+}
+
+/* Add shadow effect to buttons for a modern look */
+.btn-primary,
+.btn-danger {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Reduce excessive padding for columns */
+.border-end,
+.border-start {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+/* Customize the progress bar */
+.progress {
+  background-color: #e9ecef;
+  border-radius: 5px;
+}
+
+.progress-bar {
+  transition: width 0.4s ease;
+}
+
+/* Hide tooltip after clicking Add to Cart */
+.tooltip {
+  opacity: 0;
+  transition: opacity 0.1s ease-in-out;
+}
+
+/* Responsive styles for smaller screens */
+@media (max-width: 768px) {
+  .container-fluid {
+    padding-left: 10px;
+    padding-right: 10px;
   }
-  to {
-    transform: rotate(360deg);
+
+  .table-responsive {
+    margin-top: 10px;
+  }
+
+  .btn-sm {
+    width: 100%;
+  }
+
+  /* Stack columns on smaller screens */
+  .border-start,
+  .border-end {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  h5.text-end {
+    text-align: center;
+  }
+
+  .d-flex.justify-content-end {
+    justify-content: center;
+  }
+
+  .form-check-input {
+    margin-left: 0;
+    margin-right: auto;
   }
 }

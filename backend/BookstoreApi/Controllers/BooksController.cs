@@ -18,16 +18,23 @@ namespace BookstoreApi.Controllers
         }
 
         [HttpGet]
-        public async Task<ActionResult<object>> GetBooks(int page = 1, int pageSize = 5, string? sortBy = "TitleAsc")
+        public async Task<ActionResult<object>> GetBooks(int page = 1, int pageSize = 5, string? sortBy = "TitleAsc", string? categories = null)
         {
             var query = _context.Books.AsQueryable();
 
-            // Sorting logic for Title (A-Z and Z-A)
+            // Filtering by categories
+            if (!string.IsNullOrEmpty(categories))
+            {
+                var categoryList = categories.Split(',').ToList();
+                query = query.Where(b => categoryList.Contains(b.Category));
+            }
+
+            // Sorting logic
             query = sortBy switch
             {
-                "TitleAsc" => query.OrderBy(b => b.Title),   // A-Z
-                "TitleDesc" => query.OrderByDescending(b => b.Title),  // Z-A
-                _ => query.OrderBy(b => b.Title)  // Default to A-Z
+                "TitleAsc" => query.OrderBy(b => b.Title),
+                "TitleDesc" => query.OrderByDescending(b => b.Title),
+                _ => query.OrderBy(b => b.Title)
             };
 
             var totalCount = await query.CountAsync();
@@ -50,6 +57,5 @@ namespace BookstoreApi.Controllers
 
             return new { books, totalCount };
         }
-
     }
 }
