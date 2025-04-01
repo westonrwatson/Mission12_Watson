@@ -136,7 +136,7 @@ const BookList = () => {
                             onClick={(e) => {
                                 navigate(`/add-to-cart/${book.bookID}`);
 
-                                // *******SPECIAL BOOTSTRAP FEATURE 1!!!! Hide tooltip after clicking Add to Cart
+                                // *******SPECIAL BOOTSTRAP FEATURE 1!!!! tooltip when hovering over Add to Cart
                                 const tooltipElement = document.getElementById(`add-to-cart-${book.bookID}`);
                                 if (tooltipElement) {
                                 const tooltipInstance = Tooltip.getInstance(tooltipElement); // Get the tooltip instance
@@ -178,7 +178,7 @@ const BookList = () => {
                     <p className="text-start">Your cart is empty.</p>
                     ) : (
                     <>
-                        {/* *******SPECIAL BOOTSTRAP FEATURE 2!!!! progress Bar for Tracking Items */}
+                        {/* *******SPECIAL BOOTSTRAP FEATURE 2!!!! Progress Bar for Tracking Items */}
                         <div className="progress mb-3" style={{ height: "20px" }}>
                         <div
                             className="progress-bar bg-info"
