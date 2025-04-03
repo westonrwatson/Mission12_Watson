@@ -27,7 +27,6 @@ bin/
 obj/
 *.db
 *.db-journal
-*.sqlite
 *.pdb
 *.dll
 *.DS_Store

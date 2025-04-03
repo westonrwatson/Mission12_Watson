@@ -26,7 +26,7 @@ const AdminPage: React.FC = () => {
   const [currentBook, setCurrentBook] = useState<Partial<Book>>({});
   const [errors, setErrors] = useState<{ [key: string]: string }>({});
   const [page, setPage] = useState(1);
-  const [pageSize, setPageSize] = useState(5);
+  const pageSize = 5;
   const [totalPages, setTotalPages] = useState(1);
 
   useEffect(() => {
@@ -66,13 +66,17 @@ const AdminPage: React.FC = () => {
     }
 
     try {
-      if (currentBook.bookID) {
+      const isEdit = !!currentBook.bookID;
+    
+      if (isEdit) {
         await updateBook(currentBook as Book);
       } else {
         await addBook(currentBook as Book);
+        setPage(1); // 🔁 Reset to page 1 after adding
       }
+    
       setShowModal(false);
-      fetchBooks(page, pageSize);
+      await fetchBooks(isEdit ? page : 1, pageSize); // 🔁 Make sure it fetches from the correct page
       setErrors({});
     } catch (error) {
       console.error("Error saving book:", error);

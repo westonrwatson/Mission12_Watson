@@ -3,7 +3,11 @@
 import axios from "axios";
 import { Book } from "../models/Book";
 
-const API_URL = "https://mission13-watson-backend-chg6e2c0guf5bfc2.centralus-01.azurewebsites.net/api/books";
+const isLocalhost = window.location.hostname === "localhost";
+const API_URL = isLocalhost
+  ? "http://localhost:5085/api/books"
+  : "https://mission13-watson-backend-chg6e2c0guf5bfc2.centralus-01.azurewebsites.net/api/books";
+
 
 
   // Get all books
