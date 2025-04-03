@@ -317,3 +317,4 @@
 /Users/westonwatson/Documents/Winter 2025/413/Mission12_Watson/backend/BookstoreApi/obj/Debug/net8.0/BookstoreApi.pdb
 /Users/westonwatson/Documents/Winter 2025/413/Mission12_Watson/backend/BookstoreApi/obj/Debug/net8.0/BookstoreApi.genruntimeconfig.cache
 /Users/westonwatson/Documents/Winter 2025/413/Mission12_Watson/backend/BookstoreApi/obj/Debug/net8.0/ref/BookstoreApi.dll
+/Users/westonwatson/Documents/Winter 2025/413/Mission12_Watson/backend/BookstoreApi/bin/Debug/net8.0/Bookstore.sqlite

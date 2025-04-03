@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "undefined/subscriptions/abecdc17-5b03-4f59-be3a-45e4a1edecf9/resourceGroups/appsvc_windows_centralus/providers/Microsoft.Web/sites/Mission13-Watson-Backend",
+    "appService.deploySubpath": "backend/BookstoreApi/publish"
+}
